@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#0b0b0a" />
+    <meta name="description" content="Aurelian Build &amp; Interiors — architecture, construction and interior design. From empty land to extraordinary living." />
+    <title>Aurelian Build &amp; Interiors — Architecture &amp; Construction</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" as="image" href="/frames/frame_0001.webp" fetchpriority="high" media="(prefers-reduced-motion: no-preference)" />
+  </head>
+  <body>
+    <a class="skip-link" href="#services">Skip to content</a>
+
+    <header class="site-header" id="site-header">
+      <a class="logo" href="#top" aria-label="Aurelian Build &amp; Interiors — home">
+        <span class="logo-mark" aria-hidden="true"></span>
+        <span class="logo-text">Aurelian</span>
+      </a>
+      <a class="btn btn-outline" href="#contact">Contact</a>
+    </header>
+
+    <main id="top">
+      <!-- ============ Scroll-controlled image sequence ============ -->
+      <section class="sequence" id="sequence" aria-label="From empty land to a finished home">
+        <div class="stage">
+          <canvas class="sequence-canvas" id="sequence-canvas" data-frame="0" aria-hidden="true"></canvas>
+          <div class="stage-shade" aria-hidden="true"></div>
+
+          <div class="hero" id="hero">
+            <p class="eyebrow">Architecture · Construction · Interiors</p>
+            <h1 class="hero-title">From empty land to <em>extraordinary</em> living.</h1>
+            <p class="hero-sub">Scroll to watch a vision take shape.</p>
+            <div class="scroll-cue" aria-hidden="true"><span></span></div>
+          </div>
+
+          <div class="side-shade side-shade--left" id="shade-left" aria-hidden="true"></div>
+          <div class="side-shade side-shade--right" id="shade-right" aria-hidden="true"></div>
+          <ol class="panels" id="panels"></ol>
+
+          <div class="loader" id="loader" role="status" aria-live="polite">
+            <span class="loader-line"><span class="loader-fill" id="loader-fill"></span></span>
+            <span class="loader-pct" id="loader-pct">0%</span>
+          </div>
+
+          <nav class="seq-bar" id="seq-bar" aria-label="Scenes">
+            <div class="seq-bar-head">
+              <span class="seq-bar-scene" id="bar-scene">The Ground</span>
+              <span class="seq-bar-count">
+                <span id="bar-index">01</span> / 06<span class="seq-bar-sep" aria-hidden="true"></span><span id="bar-pct">0%</span>
+              </span>
+            </div>
+            <div class="seq-bar-track" aria-hidden="true"><span class="seq-bar-fill" id="bar-fill"></span></div>
+            <ol class="seq-bar-labels"></ol>
+          </nav>
+        </div>
+      </section>
+
+      <!-- ============ Services ============ -->
+      <section class="section services" id="services" aria-labelledby="services-title">
+        <div class="container">
+          <header class="services-head">
+            <div class="services-head-main">
+              <p class="eyebrow eyebrow-rule" data-reveal>What we do</p>
+              <h2 id="services-title" class="section-title" data-split>One studio, from first sketch to final finish.</h2>
+            </div>
+            <div class="services-head-aside" data-reveal style="--d: 200ms">
+              <p>Architects, builders and interior designers under one roof — so the vision you sign off on is the home you walk into. One team, one contract, one point of contact from the first site visit to the day we hand over the keys.</p>
+            </div>
+          </header>
+
+          <div class="cards">
+            <article class="card" data-reveal style="--d: 0ms">
+              <div class="card-inner">
+                <div class="card-media">
+                  <div class="card-media-parallax">
+                    <img src="/frames/frame_0241.webp" alt="Finished modern villa with pool at dusk" loading="lazy" decoding="async" width="1280" height="720" />
+                  </div>
+                  <span class="card-tag">Weeks 1–10</span>
+                </div>
+                <div class="card-body">
+                  <span class="card-num">01</span>
+                  <h3>Architectural Planning</h3>
+                  <p>Site studies, concept design and planning approvals — shaped around how you want to live.</p>
+                  <ul class="card-list">
+                    <li>Site &amp; feasibility analysis</li>
+                    <li>Concept &amp; 3D visualisation</li>
+                    <li>Planning &amp; building approvals</li>
+                  </ul>
+                  <a class="card-link" href="#contact">Discuss your project <span aria-hidden="true">→</span></a>
+                </div>
+                <span class="card-glare" aria-hidden="true"></span>
+              </div>
+            </article>
+            <article class="card" data-reveal style="--d: 140ms">
+              <div class="card-inner">
+                <div class="card-media">
+                  <div class="card-media-parallax">
+                    <img src="/frames/frame_0145.webp" alt="Concrete frame under construction with tower crane" loading="lazy" decoding="async" width="1280" height="720" />
+                  </div>
+                  <span class="card-tag">Months 3–14</span>
+                </div>
+                <div class="card-body">
+                  <span class="card-num">02</span>
+                  <h3>Construction</h3>
+                  <p>Disciplined project management, trusted trades and transparent reporting from groundwork to roof.</p>
+                  <ul class="card-list">
+                    <li>Groundworks &amp; foundations</li>
+                    <li>Structure, envelope &amp; services</li>
+                    <li>Weekly site reports &amp; fixed-price contracts</li>
+                  </ul>
+                  <a class="card-link" href="#contact">Discuss your project <span aria-hidden="true">→</span></a>
+                </div>
+                <span class="card-glare" aria-hidden="true"></span>
+              </div>
+            </article>
+            <article class="card" data-reveal style="--d: 280ms">
+              <div class="card-inner">
+                <div class="card-media">
+                  <div class="card-media-parallax">
+                    <img src="/frames/frame_0361.webp" alt="Living room with fireplace and floor-to-ceiling city view" loading="lazy" decoding="async" width="1280" height="720" />
+                  </div>
+                  <span class="card-tag">Final 4 months</span>
+                </div>
+                <div class="card-body">
+                  <span class="card-num">03</span>
+                  <h3>Interior Design</h3>
+                  <p>Materials, lighting and bespoke joinery composed into calm, enduring interiors.</p>
+                  <ul class="card-list">
+                    <li>Spatial planning &amp; lighting design</li>
+                    <li>Material, finish &amp; furniture curation</li>
+                    <li>Bespoke joinery &amp; styling</li>
+                  </ul>
+                  <a class="card-link" href="#contact">Discuss your project <span aria-hidden="true">→</span></a>
+                </div>
+                <span class="card-glare" aria-hidden="true"></span>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="marquee" aria-hidden="true">
+          <div class="marquee-track" id="marquee-track">
+            <span>Architecture</span><span>Construction</span><span>Interiors</span><span>Landscape</span>
+            <span>Architecture</span><span>Construction</span><span>Interiors</span><span>Landscape</span>
+          </div>
+        </div>
+
+        <div class="container">
+          <!-- Sample figures — replace with your studio's real numbers. -->
+          <dl class="stats">
+            <div class="stat" data-reveal style="--d: 0ms"><dt>Years building</dt><dd><span data-count="18">18</span>+</dd></div>
+            <div class="stat" data-reveal style="--d: 100ms"><dt>Homes delivered</dt><dd><span data-count="140">140</span></dd></div>
+            <div class="stat" data-reveal style="--d: 200ms"><dt>Clients who refer us</dt><dd><span data-count="96">96</span>%</dd></div>
+            <div class="stat" data-reveal style="--d: 300ms"><dt>Design awards</dt><dd><span data-count="12">12</span></dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- ============ Process ============ -->
+      <section class="section process op" id="process" aria-labelledby="process-title">
+        <div class="container">
+          <header class="op-head">
+            <p class="eyebrow op-eyebrow">Our Process</p>
+            <h2 id="process-title" class="section-title op-title">Four steps. One accountable team.</h2>
+            <span class="op-head-rule" aria-hidden="true"></span>
+            <p class="op-intro">From the first conversation to the day we hand you the keys, one dedicated team stays with your project.</p>
+          </header>
+
+          <div class="op-story">
+            <!-- Desktop only: sticky image frame (decorative copy of the step images) -->
+            <div class="op-visual" aria-hidden="true">
+              <div class="op-frame">
+                <div class="op-frame-inner">
+                  <div class="op-shot" data-shot="0">
+                    <img src="/frames/frame_0010.webp" alt="" loading="lazy" decoding="async" width="1280" height="720" />
+                  </div>
+                  <div class="op-shot" data-shot="1">
+                    <img src="/frames/frame_0230.webp" alt="" loading="lazy" decoding="async" width="1280" height="720" />
+                    <span class="op-blueprint" aria-hidden="true"><img src="/frames/frame_0230.webp" alt="" loading="lazy" decoding="async" width="1280" height="720" /></span>
+                  </div>
+                  <div class="op-shot" data-shot="2">
+                    <img src="/frames/frame_0155.webp" alt="" loading="lazy" decoding="async" width="1280" height="720" />
+                  </div>
+                  <div class="op-shot" data-shot="3">
+                    <img src="/frames/frame_0505.webp" alt="" loading="lazy" decoding="async" width="1280" height="720" />
+                  </div>
+                </div>
+                <div class="op-bignum"><span>01</span><span>02</span><span>03</span><span>04</span></div>
+              </div>
+            </div>
+
+            <!-- Durations below are placeholders — replace with your real timelines. -->
+            <div class="op-steps">
+              <span class="op-line" aria-hidden="true"><span class="op-line-fill"></span></span>
+              <ol class="op-list">
+                <li class="op-step" data-step="0">
+                  <article class="op-card" aria-labelledby="op-title-1">
+                    <figure class="op-media">
+                      <img src="/frames/frame_0010.webp" alt="Prepared building site at sunset, with the foundation slab and rebar in place" loading="lazy" decoding="async" width="1280" height="720" />
+                    </figure>
+                    <div class="op-body">
+                      <span class="op-node" aria-hidden="true"></span>
+                      <span class="op-num">01</span>
+                      <h3 class="op-step-title" id="op-title-1">Consultation</h3>
+                      <p class="op-desc">We start by listening — to your goals, your budget, and the land itself. A site visit and feasibility review set a clear direction.</p>
+                      <ul class="op-tags" aria-label="Includes"><li style="--i: 0">Site visit</li><li style="--i: 1">Feasibility study</li><li style="--i: 2">Budget plan</li></ul>
+                      <span class="op-chip"><span class="op-chip-label">Duration</span> 1–2 weeks</span>
+                    </div>
+                  </article>
+                </li>
+                <li class="op-step" data-step="1">
+                  <article class="op-card" aria-labelledby="op-title-2">
+                    <figure class="op-media">
+                      <img src="/frames/frame_0230.webp" alt="Finished modern villa with an infinity pool at dusk — the design brought to life" loading="lazy" decoding="async" width="1280" height="720" />
+                      <span class="op-blueprint" aria-hidden="true"><img src="/frames/frame_0230.webp" alt="" loading="lazy" decoding="async" width="1280" height="720" /></span>
+                    </figure>
+                    <div class="op-body">
+                      <span class="op-node" aria-hidden="true"></span>
+                      <span class="op-num">02</span>
+                      <h3 class="op-step-title" id="op-title-2">Design</h3>
+                      <p class="op-desc">Our architects and interior designers turn ideas into detailed plans, 3D visualisations, and material selections you can see and feel.</p>
+                      <ul class="op-tags" aria-label="Includes"><li style="--i: 0">Architectural drawings</li><li style="--i: 1">3D renders</li><li style="--i: 2">Material palette</li></ul>
+                      <span class="op-chip"><span class="op-chip-label">Duration</span> 4–8 weeks</span>
+                    </div>
+                  </article>
+                </li>
+                <li class="op-step" data-step="2">
+                  <article class="op-card" aria-labelledby="op-title-3">
+                    <figure class="op-media">
+                      <img src="/frames/frame_0155.webp" alt="Villa under construction with its steel frame, glazing and a tower crane" loading="lazy" decoding="async" width="1280" height="720" />
+                    </figure>
+                    <div class="op-body">
+                      <span class="op-node" aria-hidden="true"></span>
+                      <span class="op-num">03</span>
+                      <h3 class="op-step-title" id="op-title-3">Build</h3>
+                      <p class="op-desc">Our own site team builds to the plan with weekly progress updates, strict quality checks, and a single point of contact.</p>
+                      <ul class="op-tags" aria-label="Includes"><li style="--i: 0">Project management</li><li style="--i: 1">Quality control</li><li style="--i: 2">Weekly reports</li></ul>
+                      <span class="op-chip"><span class="op-chip-label">Duration</span> 6–14 months</span>
+                    </div>
+                  </article>
+                </li>
+                <li class="op-step" data-step="3">
+                  <article class="op-card" aria-labelledby="op-title-4">
+                    <figure class="op-media">
+                      <img src="/frames/frame_0505.webp" alt="Finished master bedroom with floor-to-ceiling windows and a city view" loading="lazy" decoding="async" width="1280" height="720" />
+                    </figure>
+                    <div class="op-body">
+                      <span class="op-node" aria-hidden="true"></span>
+                      <span class="op-num">04</span>
+                      <h3 class="op-step-title" id="op-title-4">Handover</h3>
+                      <p class="op-desc">We finish every detail, walk you through your new home, and stay on call with an after-care warranty.</p>
+                      <ul class="op-tags" aria-label="Includes"><li style="--i: 0">Final walkthrough</li><li style="--i: 1">Documentation</li><li style="--i: 2">Warranty support</li></ul>
+                      <span class="op-chip"><span class="op-chip-label">Duration</span> Ongoing care</span>
+                    </div>
+                  </article>
+                </li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="op-cta">
+            <p class="op-cta-text">Ready to start your project?</p>
+            <a class="btn btn-solid op-cta-btn" href="#contact">Book a consultation</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ Contact ============ -->
+      <section class="section contact ct" id="contact" aria-labelledby="contact-title">
+        <div class="container">
+          <header class="ct-head">
+            <div class="ct-head-main">
+              <p class="eyebrow eyebrow-rule" data-ct-reveal>Contact</p>
+              <h2 id="contact-title" class="section-title" data-ct-reveal style="--d: 80ms">Let's build something <em>extraordinary</em>.</h2>
+            </div>
+            <p class="ct-head-aside" data-ct-reveal style="--d: 160ms">Tell us about your land, your plans or your home. A senior architect reads every enquiry and replies within two working days.</p>
+          </header>
+
+          <div class="ct-grid">
+            <ul class="ct-methods" aria-label="Contact details" data-ct-reveal style="--d: 0ms">
+              <li>
+                <a class="ct-method" href="mailto:hello@aurelianbuild.com">
+                  <span class="ct-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1" /><path d="m3.5 6 8.5 7 8.5-7" /></svg>
+                  </span>
+                  <span class="ct-method-text">
+                    <span class="ct-method-label">Email us</span>
+                    <span class="ct-method-value">hello@aurelianbuild.com</span>
+                  </span>
+                  <span class="ct-method-arrow" aria-hidden="true">→</span>
+                </a>
+              </li>
+              <li>
+                <a class="ct-method" href="tel:+441632960184">
+                  <span class="ct-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1Z" /></svg>
+                  </span>
+                  <span class="ct-method-text">
+                    <span class="ct-method-label">Call the studio</span>
+                    <span class="ct-method-value">+44 1632 960 184</span>
+                  </span>
+                  <span class="ct-method-arrow" aria-hidden="true">→</span>
+                </a>
+              </li>
+            </ul>
+
+            <figure class="ct-studio" data-ct-reveal style="--d: 120ms">
+              <div class="ct-studio-media">
+                <img src="/frames/frame_0265.webp" alt="One of our finished villas, lit at dusk" loading="lazy" decoding="async" width="1280" height="720" />
+              </div>
+              <figcaption class="ct-studio-body">
+                <span class="ct-studio-label">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11Z" /><circle cx="12" cy="10" r="2.3" /></svg>
+                  Visit the studio
+                </span>
+                <address>14 Meridian Row, Clerkenwell<br />London EC1V 4QT</address>
+                <dl class="ct-hours">
+                  <div><dt>Mon–Fri</dt><dd>9:00–18:00</dd></div>
+                  <div><dt>Saturday</dt><dd>By appointment</dd></div>
+                </dl>
+              </figcaption>
+            </figure>
+
+            <!-- TODO: Placeholder form. It does not submit anywhere — connect it to your backend or form service. -->
+            <form class="ct-form" id="contact-form" novalidate data-ct-reveal style="--d: 200ms">
+              <div class="ct-form-head">
+                <h3 class="ct-form-title">Start your project</h3>
+                <p class="ct-form-note">Free first consultation · No obligation</p>
+              </div>
+
+              <fieldset class="ct-interests">
+                <legend>I'm interested in</legend>
+                <div class="ct-chips">
+                  <label class="ct-chip"><input type="checkbox" name="interest" value="architecture" /><span>Architecture</span></label>
+                  <label class="ct-chip"><input type="checkbox" name="interest" value="construction" /><span>Construction</span></label>
+                  <label class="ct-chip"><input type="checkbox" name="interest" value="interiors" /><span>Interiors</span></label>
+                  <label class="ct-chip"><input type="checkbox" name="interest" value="turnkey" /><span>Full turnkey build</span></label>
+                </div>
+              </fieldset>
+
+              <div class="ct-form-row">
+                <div class="field">
+                  <label for="f-name">Name</label>
+                  <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Your full name" required />
+                </div>
+                <div class="field">
+                  <label for="f-email">Email</label>
+                  <input id="f-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
+                </div>
+              </div>
+              <div class="ct-form-row">
+                <div class="field">
+                  <label for="f-phone">Phone <span class="ct-optional">Optional</span></label>
+                  <input id="f-phone" name="phone" type="tel" autocomplete="tel" placeholder="+44" />
+                </div>
+                <div class="field">
+                  <label for="f-location">Project location <span class="ct-optional">Optional</span></label>
+                  <input id="f-location" name="location" type="text" autocomplete="address-level2" placeholder="Town or postcode" />
+                </div>
+              </div>
+              <div class="field">
+                <label for="f-message">About your project</label>
+                <textarea id="f-message" name="message" rows="5" placeholder="The land, the home you imagine, your timeline…" required></textarea>
+              </div>
+
+              <div class="ct-submit">
+                <button class="btn btn-solid ct-btn" type="submit">
+                  Send enquiry
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6" /></svg>
+                </button>
+                <p class="ct-privacy">We only use your details to reply to this enquiry.</p>
+              </div>
+              <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+
+          <div class="ct-next">
+            <p class="eyebrow eyebrow-rule" data-ct-reveal>What happens next</p>
+            <ol class="ct-next-list">
+              <li data-ct-reveal style="--d: 0ms">
+                <span class="ct-next-num">01</span>
+                <h3>We reply</h3>
+                <p>Within two working days, with a few questions about your site, budget and timing.</p>
+              </li>
+              <li data-ct-reveal style="--d: 120ms">
+                <span class="ct-next-num">02</span>
+                <h3>Free consultation</h3>
+                <p>A site visit or studio meeting with one of our architects, at no cost to you.</p>
+              </li>
+              <li data-ct-reveal style="--d: 240ms">
+                <span class="ct-next-num">03</span>
+                <h3>Your proposal</h3>
+                <p>A clear scope, timeline and fixed-fee quote you can plan around with confidence.</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <span class="logo">
+          <span class="logo-mark" aria-hidden="true"></span>
+          <span class="logo-text">Aurelian Build &amp; Interiors</span>
+        </span>
+        <p>© <span id="year"></span> Aurelian Build &amp; Interiors. All rights reserved.</p>
+        <p class="muted">14 Meridian Row, London EC1V 4QT · hello@aurelianbuild.com</p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
