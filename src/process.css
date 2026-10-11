@@ -81,6 +81,9 @@
   transform-origin: 50% 50%;
   transform: scale(1.04);
 }
+.op .op-step[data-step="3"] .op-media img {
+  object-position: 0% 50%;
+}
 .op .op-body {
   position: relative;
   display: flex;
@@ -484,7 +487,10 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 52% 50%;
+    object-position: 50% 50%;
+  }
+  .op--animated .op-shot[data-shot="3"] > img {
+    object-position: 0% 50%;
   }
   .op--animated .op-shot .op-blueprint {
     display: block;
