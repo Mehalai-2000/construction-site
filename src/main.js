@@ -5,6 +5,7 @@ import { createSequence } from './sequence.js'
 import { createServices } from './services.js'
 import { createProcess } from './process.js'
 import { createContact } from './contact.js'
+import { createNav } from './nav.js'
 
 // Always open on frame 1: without this the browser restores the previous
 // scroll position on reload and the sequence plays forward on its own.
@@ -16,6 +17,7 @@ const destroySequence = createSequence(document)
 const destroyServices = createServices(document)
 const destroyProcess = createProcess(document)
 const destroyContact = createContact(document)
+const destroyNav = createNav(document)
 
 // Header turns solid once the pinned sequence has scrolled past.
 const header = document.querySelector('#site-header')
@@ -52,6 +54,7 @@ if (import.meta.hot) {
     destroyServices()
     destroyProcess()
     destroyContact()
+    destroyNav()
     headerIo.disconnect()
     form.removeEventListener('submit', onSubmit)
   })
