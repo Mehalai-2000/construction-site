@@ -364,57 +364,35 @@
               </figure>
             </div>
 
-            <!-- Right Column: Interactive Consultation Planner Form -->
+            <!-- Right Column: Streamlined Consultation Request Form -->
             <form class="ct-form" id="contact-form" novalidate data-ct-reveal style="--d: 180ms">
               <div class="ct-form-head">
                 <div>
                   <h3 class="ct-form-title">Consultation Request</h3>
                   <p class="ct-form-subtitle">Complimentary preliminary feasibility review · Strict confidentiality</p>
                 </div>
-                <span class="ct-form-badge">Step 1 of 1</span>
+                <span class="ct-form-badge">Direct Access</span>
               </div>
 
-              <!-- 1. Services selection -->
+              <!-- Project Scope -->
               <fieldset class="ct-fieldset">
                 <legend class="ct-legend">Project Scope</legend>
                 <div class="ct-chips">
                   <label class="ct-chip"><input type="checkbox" name="interest" value="architecture" checked /><span>Architecture &amp; Planning</span></label>
                   <label class="ct-chip"><input type="checkbox" name="interest" value="turnkey" /><span>Turnkey Construction</span></label>
                   <label class="ct-chip"><input type="checkbox" name="interest" value="interiors" /><span>Interior Architecture</span></label>
-                  <label class="ct-chip"><input type="checkbox" name="interest" value="heritage" /><span>Historic / Bespoke Estate</span></label>
                 </div>
               </fieldset>
 
-              <!-- 2. Budget range radio pills -->
-              <fieldset class="ct-fieldset">
-                <legend class="ct-legend">Estimated Investment Range</legend>
-                <div class="ct-chips ct-chips--radio">
-                  <label class="ct-chip"><input type="radio" name="budget" value="500k-1m" /><span>£500k – £1M</span></label>
-                  <label class="ct-chip"><input type="radio" name="budget" value="1m-2.5m" checked /><span>£1M – £2.5M</span></label>
-                  <label class="ct-chip"><input type="radio" name="budget" value="2.5m-5m" /><span>£2.5M – £5M</span></label>
-                  <label class="ct-chip"><input type="radio" name="budget" value="5m+" /><span>£5M+ (Grand Estate)</span></label>
-                </div>
-              </fieldset>
-
-              <!-- 3. Consultation format -->
-              <fieldset class="ct-fieldset">
-                <legend class="ct-legend">Preferred Meeting Format</legend>
-                <div class="ct-chips ct-chips--radio">
-                  <label class="ct-chip"><input type="radio" name="meeting" value="studio" checked /><span>Studio Meeting</span></label>
-                  <label class="ct-chip"><input type="radio" name="meeting" value="site" /><span>Site / Land Visit</span></label>
-                  <label class="ct-chip"><input type="radio" name="meeting" value="video" /><span>Private Video Call</span></label>
-                </div>
-              </fieldset>
-
-              <!-- 4. Client details -->
+              <!-- Client Details -->
               <div class="ct-form-row">
                 <div class="field">
                   <label for="f-name">Full Name <span class="ct-required">*</span></label>
-                  <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Lord / Lady / Mr / Ms..." required />
+                  <input id="f-name" name="name" type="text" autocomplete="name" placeholder="Your name" required />
                 </div>
                 <div class="field">
                   <label for="f-email">Direct Email <span class="ct-required">*</span></label>
-                  <input id="f-email" name="email" type="email" autocomplete="email" placeholder="client@example.com" required />
+                  <input id="f-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
                 </div>
               </div>
 
@@ -424,14 +402,14 @@
                   <input id="f-phone" name="phone" type="tel" autocomplete="tel" placeholder="+44 7..." />
                 </div>
                 <div class="field">
-                  <label for="f-location">Plot / Property Location <span class="ct-required">*</span></label>
-                  <input id="f-location" name="location" type="text" autocomplete="address-level2" placeholder="e.g. Surrey, Kensington, Cotswolds" required />
+                  <label for="f-location">Project Location <span class="ct-required">*</span></label>
+                  <input id="f-location" name="location" type="text" autocomplete="address-level2" placeholder="e.g. Surrey, Kensington" required />
                 </div>
               </div>
 
               <div class="field">
                 <label for="f-message">Project Vision &amp; Notes</label>
-                <textarea id="f-message" name="message" rows="4" placeholder="Brief details on your site, architectural style, desired timeline or planning status..." required></textarea>
+                <textarea id="f-message" name="message" rows="3" placeholder="Brief details about your plot, vision, or timeline..." required></textarea>
               </div>
 
               <!-- Trust Pillars -->
