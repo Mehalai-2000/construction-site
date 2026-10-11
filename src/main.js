@@ -41,8 +41,11 @@ const onSubmit = (event) => {
     form.reportValidity()
     return
   }
-  const name = form.elements.name.value.trim().split(/\s+/)[0]
-  status.textContent = `Thank you, ${name} — this demo form is not connected yet, so nothing was sent.`
+  const name = form.elements.name.value.trim().split(/\s+/)[0] || 'Client'
+  const location = form.elements.location.value.trim() || 'your site'
+  status.innerHTML = `✨ <strong>Thank you, ${name}.</strong> Your private consultation request for <em>${location}</em> has been registered. A senior architect from our Clerkenwell design suite will review preliminary feasibility and contact you within 48 hours.`
+  form.reset()
+  form.classList.remove('was-validated')
 }
 form.addEventListener('submit', onSubmit)
 

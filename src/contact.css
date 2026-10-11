@@ -1,28 +1,28 @@
 /* ==========================================================================
-   Contact — editorial header, contact tiles + studio photo card beside the
-   enquiry form, then a "what happens next" strip.
-   Every rule is scoped under .ct (the #contact section); reuses global tokens.
+   Contact — Luxury Architectural Consultation Suite & Project Planner
    ========================================================================== */
 
 .ct {
   --ct-ease: cubic-bezier(0.22, 1, 0.36, 1);
-  --ct-panel: linear-gradient(180deg, #151513 0%, var(--bg-2) 100%);
+  --ct-panel: linear-gradient(180deg, rgba(21, 21, 19, 0.94) 0%, rgba(14, 14, 12, 0.98) 100%);
   --ct-error: #e08a6f;
   position: relative;
   overflow: clip;
   background:
-    radial-gradient(ellipse 50% 35% at 100% 0%, rgba(184, 154, 94, 0.08), rgba(184, 154, 94, 0) 70%),
-    radial-gradient(ellipse 45% 30% at 0% 100%, rgba(184, 154, 94, 0.06), rgba(184, 154, 94, 0) 70%),
+    radial-gradient(ellipse 65% 45% at 90% 10%, rgba(184, 154, 94, 0.12), rgba(184, 154, 94, 0) 70%),
+    radial-gradient(ellipse 50% 35% at 5% 90%, rgba(184, 154, 94, 0.08), rgba(184, 154, 94, 0) 70%),
     var(--bg);
+  padding-top: clamp(4rem, 8vw, 7rem);
+  padding-bottom: clamp(4rem, 8vw, 7rem);
 }
 
 /* ---------- Header ---------- */
 .ct .ct-head {
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
   align-items: end;
   gap: clamp(1.5rem, 5vw, 5rem);
-  margin-bottom: clamp(2.75rem, 6vw, 4.5rem);
+  margin-bottom: clamp(2.5rem, 5vw, 4.25rem);
 }
 .ct .ct-head-main {
   display: grid;
@@ -33,33 +33,49 @@
   color: var(--gold-2);
 }
 .ct .ct-head-aside {
-  max-width: 30rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
   padding-left: 1.5rem;
   border-left: 1px solid var(--rule-gold);
   color: var(--ink-2);
 }
+.ct-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.76rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-2);
+}
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #2dd4bf;
+  box-shadow: 0 0 10px #2dd4bf, 0 0 20px rgba(45, 212, 191, 0.4);
+  animation: pulse-dot 2.4s infinite ease-in-out;
+}
+@keyframes pulse-dot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.3); opacity: 0.7; }
+}
 
-/* ---------- Layout ---------- */
+/* ---------- Layout Grid ---------- */
 .ct .ct-grid {
   display: grid;
   grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
-  grid-template-rows: auto 1fr;
-  grid-template-areas:
-    'methods form'
-    'studio  form';
-  gap: clamp(1.25rem, 2.2vw, 1.75rem) clamp(1.25rem, 3vw, 2.5rem);
-}
-.ct .ct-methods {
-  grid-area: methods;
-}
-.ct .ct-studio {
-  grid-area: studio;
-}
-.ct .ct-form {
-  grid-area: form;
+  gap: clamp(1.5rem, 2.8vw, 2.75rem);
+  align-items: start;
 }
 
-/* ---------- Contact tiles ---------- */
+.ct .ct-sidebar {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* ---------- Contact Methods ---------- */
 .ct .ct-methods {
   list-style: none;
   margin: 0;
@@ -67,47 +83,47 @@
   display: grid;
   gap: 1px;
   border: 1px solid var(--rule);
-  background: var(--rule); /* shows through the 1px gap as a divider */
+  background: var(--rule);
 }
 .ct .ct-methods li {
-  display: grid; /* lets the link fill a stretched row */
+  display: grid;
 }
 .ct .ct-method {
   display: grid;
   grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
-  gap: 1rem;
+  gap: 1.1rem;
   min-height: 5.25rem;
   padding: 1rem clamp(1rem, 2vw, 1.5rem);
   text-decoration: none;
   background: var(--bg-2);
-  transition: background-color 0.35s ease;
+  transition: background-color 0.35s ease, border-color 0.35s ease;
 }
 .ct .ct-method:hover {
-  background: #191915;
+  background: #181815;
 }
 .ct .ct-icon {
   display: grid;
   place-items: center;
-  width: 2.75rem;
-  height: 2.75rem;
+  width: 2.85rem;
+  height: 2.85rem;
   border: 1px solid var(--rule-gold);
   border-radius: 50%;
   color: var(--gold-2);
-  transition:
-    background-color 0.35s ease,
-    color 0.35s ease;
+  background: rgba(184, 154, 94, 0.05);
+  transition: background-color 0.35s ease, color 0.35s ease, transform 0.35s ease;
 }
 .ct .ct-method:hover .ct-icon {
   background: var(--gold);
   color: #14120d;
+  transform: scale(1.05);
 }
 .ct svg {
   width: 1.15rem;
   height: 1.15rem;
   fill: none;
   stroke: currentColor;
-  stroke-width: 1.4;
+  stroke-width: 1.5;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
@@ -118,39 +134,39 @@
 }
 .ct .ct-method-label {
   font-size: 0.68rem;
-  letter-spacing: 0.24em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--gold);
 }
 .ct .ct-method-value {
   font-family: var(--serif);
-  font-size: clamp(1.2rem, 1.05rem + 0.5vw, 1.45rem);
+  font-size: clamp(1.15rem, 1.05rem + 0.4vw, 1.4rem);
   line-height: 1.2;
   overflow-wrap: anywhere;
 }
 .ct .ct-method-arrow {
   color: var(--ink-3);
-  transition:
-    transform 0.35s var(--ct-ease),
-    color 0.35s ease;
+  font-size: 1.1rem;
+  transition: transform 0.35s var(--ct-ease), color 0.35s ease;
 }
 .ct .ct-method:hover .ct-method-arrow {
   color: var(--gold-2);
-  transform: translateX(4px);
+  transform: translateX(5px);
 }
 
-/* ---------- Studio photo card ---------- */
+/* ---------- Studio Photo & Visual Card ---------- */
 .ct .ct-studio {
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  min-height: 22rem;
+  min-height: 28rem;
   margin: 0;
   border: 1px solid var(--rule);
   overflow: hidden;
   isolation: isolate;
   background: var(--bg-2);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
 }
 .ct .ct-studio-media {
   position: absolute;
@@ -161,33 +177,69 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  /* Anchored left and enlarged so the frame's bottom-right watermark stays out of view. */
-  object-position: 15% 50%;
-  transform-origin: 0% 50%;
-  transform: scale(1.18);
-  transition: transform 1.6s var(--ct-ease);
+  object-position: center;
+  transform: scale(1.04);
+  transition: transform 2.2s var(--ct-ease);
 }
 .ct .ct-studio:hover .ct-studio-media img {
-  transform: scale(1.24);
+  transform: scale(1.1);
 }
 .ct .ct-studio-media::after {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(11, 11, 10, 0) 0%, rgba(11, 11, 10, 0.35) 35%, rgba(11, 11, 10, 0.88) 70%, rgba(11, 11, 10, 0.96) 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(11, 11, 10, 0.15) 0%,
+    rgba(11, 11, 10, 0.45) 45%,
+    rgba(11, 11, 10, 0.88) 75%,
+    rgba(11, 11, 10, 0.98) 100%
+  );
 }
+
+.studio-pill-tag {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.4rem 0.85rem;
+  background: rgba(11, 11, 10, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(184, 154, 94, 0.4);
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink);
+  border-radius: 999px;
+}
+.pulse-ring {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #eab308;
+  box-shadow: 0 0 8px #eab308;
+}
+
 .ct .ct-studio-body {
+  position: relative;
+  z-index: 2;
   display: grid;
   gap: 0.85rem;
-  padding: clamp(1.25rem, 2.5vw, 1.85rem);
-  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.6);
+  padding: clamp(1.4rem, 2.5vw, 2.2rem);
+  background: linear-gradient(180deg, transparent 0%, rgba(11, 11, 10, 0.7) 30%, rgba(11, 11, 10, 0.95) 100%);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
 .ct .ct-studio-label {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   font-size: 0.68rem;
-  letter-spacing: 0.24em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--gold-2);
 }
@@ -198,94 +250,114 @@
 .ct .ct-studio address {
   font-family: var(--serif);
   font-style: normal;
-  font-size: clamp(1.35rem, 1.15rem + 0.7vw, 1.7rem);
+  font-size: clamp(1.35rem, 1.2rem + 0.6vw, 1.75rem);
   line-height: 1.2;
+}
+.ct .ct-studio-desc {
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: var(--ink-2);
 }
 .ct .ct-hours {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem 1.75rem;
+  gap: 0.6rem 2rem;
   margin: 0;
   padding-top: 0.85rem;
-  border-top: 1px solid rgba(243, 237, 226, 0.2);
-  font-size: 0.88rem;
+  border-top: 1px solid rgba(243, 237, 226, 0.15);
+  font-size: 0.86rem;
 }
 .ct .ct-hours div {
   display: flex;
   gap: 0.5rem;
 }
 .ct .ct-hours dt {
-  color: var(--ink-3);
+  color: var(--gold);
 }
 .ct .ct-hours dd {
   margin: 0;
   color: var(--ink);
 }
 
-/* ---------- Form ---------- */
+/* ---------- Form Container ---------- */
 .ct .ct-form {
   position: relative;
   display: grid;
   align-content: start;
-  gap: 1.35rem;
-  padding: clamp(1.5rem, 3.5vw, 3rem);
+  gap: 1.6rem;
+  padding: clamp(1.6rem, 3.5vw, 3.2rem);
   border: 1px solid var(--rule);
   background: var(--ct-panel);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 .ct .ct-form::before {
   content: '';
   position: absolute;
   top: -1px;
   left: -1px;
-  width: 96px;
-  height: 1px;
+  width: 140px;
+  height: 2px;
   background: linear-gradient(90deg, var(--gold-2), rgba(210, 183, 127, 0));
 }
+
 .ct .ct-form-head {
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
+  align-items: flex-start;
   justify-content: space-between;
-  gap: 0.5rem 1.5rem;
-  padding-bottom: 1.25rem;
+  gap: 1rem;
+  padding-bottom: 1.35rem;
   border-bottom: 1px solid var(--rule);
 }
 .ct .ct-form-title {
-  font-size: clamp(1.6rem, 1.3rem + 1vw, 2.2rem);
+  font-size: clamp(1.65rem, 1.4rem + 0.8vw, 2.2rem);
+  font-family: var(--serif);
+  font-weight: 300;
+  margin-bottom: 0.3rem;
 }
-.ct .ct-form-note {
-  font-size: 0.8rem;
+.ct .ct-form-subtitle {
+  font-size: 0.85rem;
+  color: var(--ink-2);
+}
+.ct-form-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.85rem;
+  border: 1px solid var(--rule-gold);
+  border-radius: 999px;
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
   color: var(--gold-2);
-}
-.ct .ct-form-row {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.35rem;
+  background: rgba(184, 154, 94, 0.08);
 }
 
-/* Interest chips */
-.ct .ct-interests {
+/* Fieldsets & Selectors */
+.ct-fieldset {
   margin: 0;
   padding: 0;
   border: 0;
-  min-width: 0;
 }
-.ct .ct-interests legend {
+.ct-legend {
   padding: 0;
-  margin-bottom: 0.7rem;
-  font-size: 0.7rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.72rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--ink-2);
+  color: var(--gold);
 }
+
 .ct .ct-chips {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.55rem;
+  gap: 0.6rem;
 }
 .ct .ct-chip {
   position: relative;
   cursor: pointer;
+  user-select: none;
 }
 .ct .ct-chip input {
   position: absolute;
@@ -299,15 +371,18 @@
   align-items: center;
   gap: 0.5rem;
   min-height: 42px;
-  padding: 0 1rem;
+  padding: 0 1.15rem;
   border: 1px solid var(--rule);
   border-radius: 999px;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
   color: var(--ink-2);
+  background: rgba(11, 11, 10, 0.45);
   transition:
     border-color 0.25s ease,
     background-color 0.25s ease,
-    color 0.25s ease;
+    color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 .ct .ct-chip span::before {
   content: '';
@@ -315,34 +390,52 @@
   height: 6px;
   border-radius: 50%;
   border: 1px solid var(--ink-3);
-  transition:
-    background-color 0.25s ease,
-    border-color 0.25s ease;
+  transition: background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 .ct .ct-chip:hover span {
-  border-color: rgba(243, 237, 226, 0.34);
+  border-color: rgba(184, 154, 94, 0.5);
   color: var(--ink);
+  background: rgba(184, 154, 94, 0.06);
 }
 .ct .ct-chip input:checked + span {
   border-color: var(--gold);
-  background: rgba(184, 154, 94, 0.14);
+  background: rgba(184, 154, 94, 0.16);
   color: var(--ink);
+  box-shadow: 0 0 16px rgba(184, 154, 94, 0.15);
 }
 .ct .ct-chip input:checked + span::before {
   border-color: var(--gold-2);
   background: var(--gold-2);
+  box-shadow: 0 0 6px var(--gold-2);
 }
 .ct .ct-chip input:focus-visible + span {
   outline: 2px solid var(--gold-2);
   outline-offset: 2px;
 }
 
-/* Fields */
+/* Fields & Inputs */
+.ct .ct-form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.35rem;
+}
+
+.ct .field {
+  display: grid;
+  gap: 0.5rem;
+}
 .ct .field label {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
   gap: 0.5rem;
+  font-size: 0.74rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+.ct .ct-required {
+  color: var(--gold);
 }
 .ct .ct-optional {
   font-size: 0.68rem;
@@ -350,13 +443,21 @@
   text-transform: none;
   color: var(--ink-3);
 }
+
 .ct .field input,
 .ct .field textarea {
-  background: rgba(11, 11, 10, 0.55);
-  border-color: rgba(243, 237, 226, 0.12);
+  width: 100%;
+  padding: 0.95rem 1.15rem;
+  font: 300 0.95rem/1.5 var(--sans);
+  color: var(--ink);
+  background: rgba(11, 11, 10, 0.65);
+  border: 1px solid rgba(243, 237, 226, 0.14);
+  border-radius: 0;
+  transition: border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 .ct .field textarea {
-  min-height: 9rem;
+  min-height: 8rem;
+  resize: vertical;
 }
 .ct .field input::placeholder,
 .ct .field textarea::placeholder {
@@ -364,55 +465,105 @@
 }
 .ct .field input:hover,
 .ct .field textarea:hover {
-  border-color: rgba(243, 237, 226, 0.3);
+  border-color: rgba(184, 154, 94, 0.45);
 }
 .ct .field input:focus-visible,
 .ct .field textarea:focus-visible {
   border-color: var(--gold);
-  background: rgba(11, 11, 10, 0.8);
+  background: rgba(11, 11, 10, 0.88);
+  box-shadow: 0 0 16px rgba(184, 154, 94, 0.15);
+  outline: none;
 }
-/* Invalid styling only after a submit attempt (class set in main.js). */
 .ct .was-validated .field :is(input, textarea):invalid {
   border-color: var(--ct-error);
 }
 
-/* Submit */
+/* Guarantees Bar */
+.ct-guarantees {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.ct-guarantee-item {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.76rem;
+  color: var(--ink-2);
+  line-height: 1.3;
+}
+.ct-g-icon {
+  font-size: 0.95rem;
+}
+
+/* Submit Action */
 .ct .ct-submit {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 1rem 1.5rem;
-  padding-top: 0.25rem;
+  gap: 1.25rem 2rem;
+  padding-top: 0.5rem;
 }
 .ct .ct-btn {
-  gap: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
   min-height: 54px;
-  padding: 0 1.75rem;
+  padding: 0 2rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  background: var(--gold);
+  color: #14120d;
+  border: 1px solid var(--gold);
+  cursor: pointer;
+  transition: background-color 0.35s ease, transform 0.2s ease, box-shadow 0.35s ease;
+}
+.ct .ct-btn:hover {
+  background: var(--gold-2);
+  border-color: var(--gold-2);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(184, 154, 94, 0.3);
 }
 .ct .ct-btn svg {
+  width: 1.2rem;
+  height: 1.2rem;
   transition: transform 0.35s var(--ct-ease);
 }
 .ct .ct-btn:hover svg {
-  transform: translateX(4px);
+  transform: translateX(5px);
 }
 .ct .ct-privacy {
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   color: var(--ink-3);
+  max-width: 24rem;
 }
+
+/* Status message */
 .ct .form-status:empty {
   display: none;
 }
 .ct .form-status {
-  padding: 0.85rem 1rem;
-  border-left: 2px solid var(--gold);
-  background: rgba(184, 154, 94, 0.08);
+  padding: 1.15rem 1.4rem;
+  border-left: 3px solid var(--gold);
+  background: rgba(184, 154, 94, 0.12);
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--ink);
+  animation: fade-in 0.4s ease;
+}
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-/* ---------- What happens next ---------- */
+/* ---------- What Happens Next ---------- */
 .ct .ct-next {
   display: grid;
-  gap: 1.75rem;
-  margin-top: clamp(3.5rem, 7vw, 5.5rem);
+  gap: 2rem;
+  margin-top: clamp(4rem, 8vw, 6.5rem);
 }
 .ct .ct-next-list {
   list-style: none;
@@ -420,89 +571,90 @@
   padding: 0;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(1.5rem, 3vw, 2.5rem);
+  gap: clamp(1.5rem, 3.5vw, 3rem);
   border-top: 1px solid var(--rule);
 }
 .ct .ct-next-list li {
   position: relative;
   display: grid;
   align-content: start;
-  gap: 0.6rem;
-  padding-top: 1.75rem;
+  gap: 0.75rem;
+  padding-top: 2rem;
 }
 .ct .ct-next-list li::before {
   content: '';
   position: absolute;
   top: -1px;
   left: 0;
-  width: 48px;
-  height: 1px;
+  width: 54px;
+  height: 2px;
   background: var(--gold);
 }
 .ct .ct-next-num {
   font-family: var(--serif);
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   color: var(--gold);
 }
 .ct .ct-next-list h3 {
-  font-size: clamp(1.4rem, 1.2rem + 0.6vw, 1.75rem);
+  font-size: clamp(1.3rem, 1.15rem + 0.6vw, 1.65rem);
+  font-family: var(--serif);
+  font-weight: 300;
+  line-height: 1.2;
 }
 .ct .ct-next-list p {
-  max-width: 22rem;
   color: var(--ink-2);
+  font-size: 0.92rem;
+  line-height: 1.6;
 }
 
 /* ---------- Responsive ---------- */
-@media (max-width: 1024px) {
+@media (max-width: 1080px) {
   .ct .ct-grid {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas:
-      'form    form'
-      'methods studio';
+    grid-template-columns: minmax(0, 1fr);
   }
   .ct .ct-studio {
-    min-height: 18rem;
+    min-height: 22rem;
   }
 }
+
 @media (max-width: 900px) {
   .ct .ct-head {
     grid-template-columns: minmax(0, 1fr);
   }
-}
-@media (max-width: 768px) {
-  .ct .ct-grid {
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-areas:
-      'methods'
-      'form'
-      'studio';
+  .ct-guarantees {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
   }
+}
+
+@media (max-width: 768px) {
   .ct .ct-next-list {
     grid-template-columns: minmax(0, 1fr);
     gap: 0;
   }
   .ct .ct-next-list li {
-    padding: 1.5rem 0;
+    padding: 1.75rem 0;
     border-bottom: 1px solid var(--rule);
   }
 }
-@media (max-width: 560px) {
+
+@media (max-width: 600px) {
   .ct .ct-form-row {
     grid-template-columns: minmax(0, 1fr);
   }
   .ct .ct-btn {
-    flex: 1 1 100%;
+    width: 100%;
+    justify-content: center;
   }
   .ct .ct-method {
     min-height: 4.5rem;
   }
 }
 
-/* ---------- Reveal (added by contact.js; skipped for reduced motion) ---------- */
+/* ---------- Reveal Animation ---------- */
 .ct--animated [data-ct-reveal] {
   opacity: 0;
-  transform: translate3d(0, 28px, 0);
+  transform: translate3d(0, 32px, 0);
   transition:
     opacity 0.9s var(--ct-ease) var(--d, 0ms),
     transform 0.9s var(--ct-ease) var(--d, 0ms);
