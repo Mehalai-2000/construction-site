@@ -297,23 +297,42 @@
       <!-- ============ Contact ============ -->
       <section class="section contact ct" id="contact" aria-labelledby="contact-title">
         <div class="container">
-          <header class="ct-head">
+          <header class="ct-head" data-ct-reveal>
             <div class="ct-head-main">
-              <p class="eyebrow eyebrow-rule" data-ct-reveal>Private Consultations</p>
-              <h2 id="contact-title" class="section-title" data-ct-reveal style="--d: 80ms">Let's craft your <em>architectural masterpiece</em>.</h2>
+              <p class="eyebrow">Private Consultations</p>
+              <h2 id="contact-title" class="section-title">Let's craft your <em>architectural masterpiece</em>.</h2>
             </div>
-            <div class="ct-head-aside" data-ct-reveal style="--d: 160ms">
-              <p>From initial site appraisal to turnkey key handover. Every commission begins with a private consultation with a founding partner and senior architect.</p>
-              <div class="ct-status-badge">
-                <span class="status-dot"></span>
-                <span>Accepting select residential commissions</span>
-              </div>
+            <div class="ct-status-badge">
+              <span class="status-dot"></span>
+              <span>Accepting commissions · Q4 2026</span>
             </div>
           </header>
 
           <div class="ct-grid">
-            <!-- Left Column: Methods & Studio Experience -->
+            <!-- Left Column: Studio Photo Suite & Quick Direct Desk -->
             <div class="ct-sidebar">
+              <figure class="ct-studio" data-ct-reveal style="--d: 120ms">
+                <div class="ct-studio-media">
+                  <img src="/images/studio-consultation.jpg" alt="Aurelian Private Architectural Consultation Studio with Scale Models and Panoramic City View" loading="lazy" decoding="async" width="1920" height="1080" />
+                  <div class="studio-pill-tag">
+                    <span class="pulse-ring"></span>
+                    <span>Private Design Suite</span>
+                  </div>
+                </div>
+                <figcaption class="ct-studio-body">
+                  <div class="ct-studio-head">
+                    <span class="ct-studio-label">
+                      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11Z" /><circle cx="12" cy="10" r="2.3" /></svg>
+                      Clerkenwell Studio
+                    </span>
+                    <address>14 Meridian Row, London EC1V 4QT</address>
+                  </div>
+                  <dl class="ct-hours">
+                    <div><dt>Hours</dt><dd>Mon–Fri 09:00–18:00 · Weekends by appointment</dd></div>
+                  </dl>
+                </figcaption>
+              </figure>
+
               <ul class="ct-methods" aria-label="Contact details" data-ct-reveal style="--d: 0ms">
                 <li>
                   <a class="ct-method" href="mailto:hello@aurelianbuild.com" id="copy-email-btn" title="Click to copy email">
@@ -321,7 +340,7 @@
                       <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1" /><path d="m3.5 6 8.5 7 8.5-7" /></svg>
                     </span>
                     <span class="ct-method-text">
-                      <span class="ct-method-label">Direct Studio Email</span>
+                      <span class="ct-method-label">Direct Email</span>
                       <span class="ct-method-value">hello@aurelianbuild.com</span>
                     </span>
                     <span class="ct-method-arrow" aria-hidden="true">→</span>
@@ -333,35 +352,13 @@
                       <svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1Z" /></svg>
                     </span>
                     <span class="ct-method-text">
-                      <span class="ct-method-label">Direct Studio Desk</span>
+                      <span class="ct-method-label">Direct Desk</span>
                       <span class="ct-method-value">+44 1632 960 184</span>
                     </span>
                     <span class="ct-method-arrow" aria-hidden="true">→</span>
                   </a>
                 </li>
               </ul>
-
-              <figure class="ct-studio" data-ct-reveal style="--d: 120ms">
-                <div class="ct-studio-media">
-                  <img src="/images/studio-consultation.jpg" alt="Aurelian Private Architectural Consultation Studio with Scale Models and Panoramic City View" loading="lazy" decoding="async" width="1920" height="1080" />
-                  <div class="studio-pill-tag">
-                    <span class="pulse-ring"></span>
-                    <span>Private Design Suite</span>
-                  </div>
-                </div>
-                <figcaption class="ct-studio-body">
-                  <span class="ct-studio-label">
-                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11Z" /><circle cx="12" cy="10" r="2.3" /></svg>
-                    Meridian Row Studio
-                  </span>
-                  <address>14 Meridian Row, Clerkenwell<br />London EC1V 4QT</address>
-                  <p class="ct-studio-desc">Private table consultations featuring architectural 3D physical models, blueprint review, and material samples library.</p>
-                  <dl class="ct-hours">
-                    <div><dt>Mon–Fri</dt><dd>09:00 – 18:00</dd></div>
-                    <div><dt>Weekend</dt><dd>By appointment</dd></div>
-                  </dl>
-                </figcaption>
-              </figure>
             </div>
 
             <!-- Right Column: Streamlined Consultation Request Form -->
@@ -412,28 +409,16 @@
                 <textarea id="f-message" name="message" rows="3" placeholder="Brief details about your plot, vision, or timeline..." required></textarea>
               </div>
 
-              <!-- Trust Pillars -->
-              <div class="ct-guarantees">
-                <div class="ct-guarantee-item">
-                  <span class="ct-g-icon">🔒</span>
-                  <span>Strict NDA &amp; Client Confidentiality</span>
-                </div>
-                <div class="ct-guarantee-item">
-                  <span class="ct-g-icon">📐</span>
-                  <span>Fixed-Fee Planning Transparency</span>
-                </div>
-                <div class="ct-guarantee-item">
-                  <span class="ct-g-icon">⏱️</span>
-                  <span>Senior Architect Response in 48h</span>
-                </div>
-              </div>
-
               <div class="ct-submit">
                 <button class="btn btn-solid ct-btn" type="submit" id="submit-btn">
                   <span>Submit Consultation Request</span>
                   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6" /></svg>
                 </button>
-                <p class="ct-privacy">Your details are kept strictly private and used solely for this consultation.</p>
+                <div class="ct-trust-strip">
+                  <span>🔒 Strict NDA</span>
+                  <span>📐 Fixed-Fee</span>
+                  <span>⏱️ 48h Response</span>
+                </div>
               </div>
 
               <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
